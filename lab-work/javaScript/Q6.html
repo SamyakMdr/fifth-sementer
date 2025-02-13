@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Samyak Manandhar</title>
+</head>
+<body>
+    <script>
+        document.write("<h2>Array Methods</h2>");
+        let arr = [1, 2, 3, 4, 5];
+
+        arr.push(6);
+        document.write("After push(6): " + arr + "<br>");
+
+        arr.pop();
+        document.write("After pop(): " + arr + "<br>");
+
+        arr.shift();
+        document.write("After shift(): " + arr + "<br>");
+
+        arr.unshift(0);
+        document.write("After unshift(0): " + arr + "<br><br>");
+
+        
+        const date = new Date();
+        document.write("<h2>Date Methods:</h2>");
+        document.write(`Current Date and Time: ${date.toLocaleString()}<br>`);
+        document.write(`Current Date: ${date.getDate()} <br>`);
+        document.write(`Current Month: ${date.getMonth()+1}<br>`);
+        document.write(`Current Year: ${date.getFullYear()}<br><br>`);
+
+        
+        let text = " Hello World! ";
+        let newText = text.replace("World", "Samyak");
+        const upperText = text.toUpperCase().trim();
+        document.write("<h2>String Methods:</h2>");
+        document.write(`Original String: "${text}"<br>`);
+        document.write(`Uppercase and Trimmed: "${upperText}"<br>`);
+        document.write(`Substring (0, 5): "${text.slice(0, 5)}"<br><br>`);
+        
+
+        const num = 4.7;
+        let maxNumber = Math.max(1, 5, 10, 3);
+        let minNumber = Math.min(1, 5, 10, 3);
+        document.write("<h2>Math Methods:</h2>");
+        document.write("Maximum value: " + maxNumber+"<br>");
+        document.write("Minimum value: " + minNumber+"<br>");
+        document.write(`Random Number (0 to 1): ${Math.random()}<br>`);
+        document.write(`Floor of ${num}: ${Math.floor(num)}<br>`);
+        document.write(`Ceiling of ${num}: ${Math.ceil(num)}<br>`);
+    </script>
+</body>
+</html>

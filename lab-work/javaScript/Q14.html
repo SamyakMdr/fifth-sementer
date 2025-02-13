@@ -1,0 +1,52 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Mouse Events</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <style>
+        #hoverBox {
+            width: 200px;
+            height: 100px;
+            background-color: lightgray;
+            text-align: center;
+            line-height: 100px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        #output {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>jQuery Mouse Events</h1>
+    <div id="hoverBox">Click or Hover</div>
+    <p id="output"></p> <!-- Output text will be displayed here -->
+
+    <script>
+        $(document).ready(function() {
+            $("#hoverBox").click(function() {
+                $("#output").text("Area is Clicked!");
+            });
+
+            $("#hoverBox").hover(
+                function() {
+                    $(this).css("background-color", "lightblue");
+                }, 
+                function() {
+                    $(this).css("background-color", "lightgray");
+                }
+            );
+
+            $("#hoverBox").dblclick(function() {
+                $("#output").text("Area is Clicked!");
+            });
+        });
+    </script>
+
+</body>
+</html>
